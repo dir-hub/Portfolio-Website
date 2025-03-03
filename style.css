@@ -765,37 +765,41 @@ header.is-visible {
   /* Adjust Navigation Bar */
   .navbar {
     width: 100%;
-    margin-left: 0;
-    justify-content: flex-start; /* Align items to the left */
+    margin: 0;
+    padding: 10px 0;
+    justify-content: flex-start;
     flex-wrap: nowrap;
     overflow-x: auto;
     white-space: nowrap;
-    position: static;
-    margin-top: 0;
-    padding: 10px 0;
-    border-radius: 0;
-    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
-    scrollbar-width: none; /* Hide scrollbar in Firefox */
-}
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 
   .navbar::-webkit-scrollbar {
-    display: none; /* Hide scrollbar in Chrome, Safari, and Opera */
-}
+    display: none;
+  }
 
   .navbar .nav-item {
     margin: 5px;
     padding: 8px 12px;
     display: inline-flex;
     font-size: 14px;
-}
+  }
+
   .nav-icon {
   font-size: 16px; /* Reduced icon size */
   margin-right: 3px; /* Reduced margin */
 } 
-  /* Adjust Header Section */
+  /* Adjust header to account for fixed navbar */
   header {
       min-height: auto;
-      padding-top: 60px; /* add padding to prevent overlap with nav */
+      padding-top: 70px;
   }
 
   .main-photo {
@@ -880,4 +884,3 @@ header.is-visible {
     height: 60px;
   }
 }
-
